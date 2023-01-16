@@ -1,8 +1,12 @@
 import {
+    Book,
+    booksArray,
+} from './modules/book.js';
+import {
     listHandler,
     addBookHandler,
     contactHandler,
-} from './modules/navigation.mjs';
+} from './modules/navigation.js';
 
 const listLink = document.getElementById('listLink');
 const addBookLink = document.getElementById('addBookLink');
@@ -14,9 +18,9 @@ const booksSection = document.getElementById('books_section');
 
 const dateElement = document.getElementById('date');
 
-let booksArray = [];
+// let booksArray = [];
 
-function retrieveData() {
+export let retrieveData = () => {
   const data = window.localStorage.getItem('books');
   const parseData = JSON.parse(data);
   if (parseData) {
@@ -24,32 +28,14 @@ function retrieveData() {
   }
 }
 
-function storeData(booksArray) {
+export let storeData = (booksArray) => {
   if (window.localStorage) {
     const jsonData = JSON.stringify(booksArray);
     window.localStorage.setItem('books', jsonData);
   }
 }
 
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-    this.id = Math.random();
-  }
 
-  static addBook(book) {
-    const newBook = new Book(book.title, book.author);
-    booksArray.push(newBook);
-    storeData(booksArray);
-    window.location.reload();
-  }
-
-  static removeBook(book) {
-    booksArray = booksArray.filter((e) => e.id !== book.id);
-    storeData(booksArray);
-  }
-}
 
 const removeBookFromDOM = (book) => {
   const removeBtn = document.getElementById(book.id);
@@ -88,13 +74,13 @@ bookForm.addEventListener('submit', (event) => {
   appendBookToDOM(newBook);
 });
 
-function loadBooks() {
+const loadBooks = () => {
   booksArray.forEach((book) => {
     appendBookToDOM(book);
   });
 }
 
-function setDateTime() {
+const setDateTime = () => {
   dateElement.innerHTML = new Date().toLocaleString();
 }
 
@@ -104,36 +90,6 @@ window.onload = () => {
   loadBooks();
   setDateTime();
 };
-
-// const listHandler = (event) => {
-//   event.preventDefault();
-//   listLink.style.color = 'blue';
-//   addBookLink.style.color = 'black';
-//   contactLink.style.color = 'black';
-//   booksSection.style.display = 'block';
-//   addBookSection.style.display = 'none';
-//   contactSection.style.display = 'none';
-// }
-
-// const addBookHandler = (event) => {
-//   event.preventDefault();
-//   listLink.style.color = 'black';
-//   addBookLink.style.color = 'blue';
-//   contactLink.style.color = 'black';
-//   booksSection.style.display = 'none';
-//   addBookSection.style.display = 'flex';
-//   contactSection.style.display = 'none';
-// }
-
-// const contactHandler = (event) => {
-//   event.preventDefault();
-//   listLink.style.color = 'black';
-//   addBookLink.style.color = 'black';
-//   contactLink.style.color = 'blue';
-//   booksSection.style.display = 'none';
-//   addBookSection.style.display = 'none';
-//   contactSection.style.display = 'block';
-// }
 
 listLink.addEventListener('click', listHandler);
 addBookLink.addEventListener('click', addBookHandler);
