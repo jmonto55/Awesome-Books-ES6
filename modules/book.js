@@ -1,7 +1,7 @@
-import { storeData } from "../index.js";
-export let booksArray = [];
+import { storeData } from "./storage.js";
+import { booksArray } from "../index.js";
 
-export class Book {
+export default class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
@@ -16,7 +16,9 @@ export class Book {
   }
 
   static removeBook(book) {
-    booksArray = booksArray.filter((e) => e.id !== book.id);
-    storeData(booksArray);
+    let booksArrayLocal = booksArray;
+    booksArrayLocal = booksArray.filter((e) => e.id !== book.id);
+    storeData(booksArrayLocal);
+    window.location.reload();
   }
 }
