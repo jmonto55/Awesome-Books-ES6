@@ -37,12 +37,13 @@ const time = document.getElementById('date');
 const dt = DateTime.now();
 time.innerHTML = dt.toLocaleString(DateTime.DATETIME_MED);
 
+//Load Data
 window.onload = () => {
   retrieveData();
   loadBooks();
 };
 
-//Navigation
+//Event Listeners navigation
 listLink.addEventListener('click', listHandler);
 addBookLink.addEventListener('click', addBookHandler);
 contactLink.addEventListener('click', contactHandler);
