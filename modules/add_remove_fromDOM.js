@@ -23,4 +23,4 @@ export default function appendBookToDOM(book) {
     Book.removeBook(book);
     removeBookFromDOM(book);
   });
-};
+}

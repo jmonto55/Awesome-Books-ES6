@@ -1,5 +1,5 @@
-import { storeData } from "./storage.js";
-import { booksArray } from "../index.js";
+import storeData from './storage.js';
+import { booksArray } from '../index.js';
 
 export default class Book {
   constructor(title, author) {

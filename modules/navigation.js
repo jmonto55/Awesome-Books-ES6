@@ -14,7 +14,7 @@ export const listHandler = (event) => {
   booksSection.style.display = 'block';
   addBookSection.style.display = 'none';
   contactSection.style.display = 'none';
-}
+};
 
 export const addBookHandler = (event) => {
   event.preventDefault();
@@ -24,7 +24,7 @@ export const addBookHandler = (event) => {
   booksSection.style.display = 'none';
   addBookSection.style.display = 'flex';
   contactSection.style.display = 'none';
-}
+};
 
 export const contactHandler = (event) => {
   event.preventDefault();
@@ -34,4 +34,4 @@ export const contactHandler = (event) => {
   booksSection.style.display = 'none';
   addBookSection.style.display = 'none';
   contactSection.style.display = 'block';
-}
+};
