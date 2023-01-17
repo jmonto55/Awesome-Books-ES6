@@ -9,7 +9,7 @@ export const removeBookFromDOM = (book) => {
   bookItem.parentElement.removeChild(bookItem);
 };
 
-export default function appendBookToDOM(book) {
+const appendBookToDOM = (book) => {
   const bookItem = document.createElement('li');
   const removeButton = document.createElement('button');
   bookItem.classList.add('book_item');
@@ -25,3 +25,5 @@ export default function appendBookToDOM(book) {
     removeBookFromDOM(book);
   });
 }
+
+export default appendBookToDOM;
