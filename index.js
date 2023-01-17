@@ -10,7 +10,7 @@ const addBookLink = document.getElementById('addBookLink');
 const contactLink = document.getElementById('contactLink');
 const bookForm = document.getElementById('booksForm');
 
-export let booksArray = [];
+export let booksArray = []; // eslint-disable import/no-mutable-exports
 
 export const retrieveData = () => {
   const parseData = JSON.parse(window.localStorage.getItem('books'));

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import storeData from './storage.js';
 import { booksArray } from '../index.js';
 

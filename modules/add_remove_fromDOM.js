@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import Book from './book.js';
 
 const booksList = document.getElementById('books_list');
