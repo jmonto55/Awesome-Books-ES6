@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import Book from './modules/book.js';
 import { listHandler, addBookHandler, contactHandler } from './modules/navigation.js';
 import appendBookToDOM from './modules/add_remove_fromDOM.js';

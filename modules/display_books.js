@@ -5,4 +5,4 @@ export default function loadBooks() {
   booksArray.forEach((book) => {
     appendBookToDOM(book);
   });
-};
+}
