@@ -3,6 +3,6 @@ const storeData = (booksArray) => {
     const jsonData = JSON.stringify(booksArray);
     window.localStorage.setItem('books', jsonData);
   }
-}
+};
 
 export default storeData;
