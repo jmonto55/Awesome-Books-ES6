@@ -1,13 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="./assets/README/screen1.png" alt="logo" width="45%"  height="50%" />
-  <img src="./assets/README/screen2.png" alt="logo" width="45%"  height="50%" />
-  <br/>
-
-  <img src="./assets/README/screen3.png" alt="logo" width="90%"  height="50%" />
-  <br/>
+  <img src="./assets/README/screen1.png" alt="example image" width="100%" />
 
   <h3><b>Awesome Books UI images</b></h3>
 
