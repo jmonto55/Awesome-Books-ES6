@@ -24,6 +24,6 @@ const appendBookToDOM = (book) => {
     Book.removeBook(book);
     removeBookFromDOM(book);
   });
-}
+};
 
 export default appendBookToDOM;
