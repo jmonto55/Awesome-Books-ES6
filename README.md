@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./assets/README/screen1.png" alt="example image" width="100%" />
+  <img src="./readme_img.png" alt="example image" width="100%" />
 
   <h3><b>Awesome Books UI images</b></h3>
 
