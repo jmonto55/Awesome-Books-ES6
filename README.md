@@ -82,7 +82,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Currently Not Available]()
+- [Live Demo](https://jmonto55.github.io/Awesome-Books-ES6/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
